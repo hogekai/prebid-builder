@@ -1,0 +1,19 @@
+{
+  "name": "prebid-builder",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kai Miyamoto",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hogekai/prebid-builder.git"
+  },
+  "homepage": "https://github.com/hogekai/prebid-builder.git",
+  "bugs": {
+    "url": "https://github.com/hogekai/prebid-builder/issues"
+  }
+}
