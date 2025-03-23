@@ -1,10 +1,26 @@
 {
   "name": "prebid-builder",
   "version": "0.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "CLI tool for building prebid.js",
+  "bin": {
+    "prebid-builder": "./dist/index.mjs"
   },
+  "scripts": {
+    "build": "tsup-node",
+    "build-dev": "node dist/index.mjs build",
+    "dev": "tsx src/index.ts build",
+    "lint": "tsc --noEmit"
+  },
+  "publishConfig": {
+    "access": "public",
+    "bin": {
+      "prebid-builder": "./src/index.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "keywords": [],
   "author": "Kai Miyamoto",
   "license": "Apache-2.0",
@@ -15,5 +31,24 @@
   "homepage": "https://github.com/hogekai/prebid-builder.git",
   "bugs": {
     "url": "https://github.com/hogekai/prebid-builder/issues"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.11",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "ora": "^8.2.0",
+    "webpack": "^5.97.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.7",
+    "@babel/preset-typescript": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "prebid.js": "^9.36.0",
+    "terser-webpack-plugin": "^5.3.11",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.2",
+    "vitest-mock-extended": "^2.0.2"
   }
 }
